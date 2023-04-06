@@ -17,7 +17,7 @@
                         "text": "&"
                     }
                 ],
-                "explanation": "TS uses a colon (:) to separate the property name from the property type"
+                "explanation": "TS  uses a colon (:) to separate the property name from the property type"
             },
             {
                 "questionText": "Which of the following is NOT a type used in TypeScript?",

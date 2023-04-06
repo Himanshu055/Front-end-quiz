@@ -37,7 +37,7 @@
                 </div>
                 <div class="options">
                     <ol>
-                        <li  *ngFor="let option of questionList[currentQuestion]?.optList | keyvalue; trackBy: questionList.id "
+                        <li  *ngFor="let option of questionList[currentQuestion]?.optList | keyvalue; "
                             style="display: flex;margin-right:67%;">
                         <input type="radio"  [(ngModel)]="answer"  formControlName="opt"  [value]="option.value" >
                             <div class="card" >
@@ -52,7 +52,7 @@
                         (click)="previousQuestion()">Previous</button>
                     <button type="button" class="btn btn-success" [disabled]="currentQuestion===questionList.length-1"
                         style="margin-left:1% ;"
-                        (click)="nextQuestion(currentQuestion,questionList[currentQuestion]?.correctAnswer)">Save &
+                        (click)="nextQuestion(currentQuestion,questionList[currentQuestion]?.answer)">Save &
                         Next</button>
                     <!-- <button class="btn btn-primary" style="float: right;" (click)="resetQuiz()">Finish</button> -->
                     <button type="submit" (click)="onSubmit()" class="btn btn-primary"

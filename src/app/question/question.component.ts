@@ -67,6 +67,7 @@ export class QuestionComponent implements OnInit {
     this.isQuizCompleted = true;
     console.log(this.questionList[this.currentQuestion]?.id)
     console.log(val);
+    console.log(this.questionList[this.currentQuestion]?.correct)
   }
 
   getAllQuestions() {
@@ -87,12 +88,12 @@ export class QuestionComponent implements OnInit {
   nextQuestion(currentQno: number, correct: any) {
     this.increase++;
     this.currentQuestion+1;
-    
+   console.log(this.questionList)
     if (currentQno === this.questionList.length) {
       this.interval$.unsubscribe();
       this.counter = 0;
     }
-    if (correct) {
+    if (this.questionList.correct) {
       this.points += 10;
       this.correctAnswer++;
     
